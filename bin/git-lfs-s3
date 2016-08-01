@@ -17,5 +17,6 @@ end
 
 Rack::Handler::WEBrick.run(
   GitLfsS3::Application.new,
-  Port: ENV['PORT'] || 8080
+  Port: ENV['PORT'] || 8080,
+  Host: "0.0.0.0"
 )
