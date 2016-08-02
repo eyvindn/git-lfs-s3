@@ -9,7 +9,7 @@ module GitLfsS3
         {
           '_links' => {
             'upload' => {
-              'href' => upload_destination + "&token=1",
+              'href' => upload_destination,
               'header' => upload_headers
             },
             'verify' => {
@@ -30,7 +30,7 @@ module GitLfsS3
       end
 
       def upload_headers
-        {'content-type' => ''}
+        {'content-type' => '', "Authorization" => ""}
       end
     end
   end
