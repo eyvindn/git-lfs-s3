@@ -30,7 +30,7 @@ module GitLfsS3
       end
 
       def upload_headers
-        {'content-type' => '', "Authorization" => ""}
+        {'content-type' => '', "Authorization" => "Basic quackquackquack"}
       end
     end
   end
