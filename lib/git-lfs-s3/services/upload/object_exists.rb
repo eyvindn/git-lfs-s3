@@ -9,10 +9,7 @@ module GitLfsS3
         {
           '_links' => {
             'download' => {
-              "header" => {
-                "Authorization" => "Basic quackquackquack"
-              },
-              'href' => object.presigned_url(:get)
+              'href' => object.presigned_url(:get, allow_any:['token'])
             }
           }
         }

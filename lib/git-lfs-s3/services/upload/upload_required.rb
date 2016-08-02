@@ -26,11 +26,11 @@ module GitLfsS3
       private
 
       def upload_destination
-        object.presigned_url(:put)
+        object.presigned_url(:put, allow_any:['token'])
       end
 
       def upload_headers
-        {'content-type' => '', "Authorization" => "Basic quackquackquack"}
+        {'content-type' => ''}
       end
     end
   end

@@ -63,10 +63,7 @@ module GitLfsS3
             },
             'download' => {
               # TODO: cloudfront support
-              "header" => {
-                "Authorization" => "Basic quackquackquack"
-              },
-              'href' => object_data(params[:oid]).presigned_url(:get)
+              'href' => object_data(params[:oid]).presigned_url(:get, allow_any:['token'])
             }
           }
         }
