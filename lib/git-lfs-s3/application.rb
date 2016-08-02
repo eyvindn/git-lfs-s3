@@ -63,7 +63,10 @@ module GitLfsS3
             },
             'download' => {
               # TODO: cloudfront support
-              'href' => object_data(params[:oid]).presigned_url(:get, allow_any:['token'])
+              "header" => {
+                "Authorization" => " "
+              },
+              'href' => object_data(params[:oid]).presigned_url(:get)
             }
           }
         }
