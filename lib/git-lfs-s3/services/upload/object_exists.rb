@@ -9,7 +9,7 @@ module GitLfsS3
         {
           '_links' => {
             'download' => {
-              'href' => "https://:@" + object.presigned_url(:get)[8..-1]
+              'href' => object.presigned_url(:get)
             }
           }
         }

@@ -26,7 +26,7 @@ module GitLfsS3
       private
 
       def upload_destination
-        "https://:@" + object.presigned_url(:put)[8..-1]
+        object.presigned_url(:put)
       end
 
       def upload_headers
